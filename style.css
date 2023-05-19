@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/linhacodigo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 24px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ff8800;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#conteudo {
+    position: relative;
+    z-index: 1;
+}
+
+#imagem-animada {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('src/logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 2;
+}
+
+#imagem-animada.mostrar {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+}
+
+.rodape {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #1a237e, #03a9f4, #1a237e);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+#servicos ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#servicos ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Custom styles */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/linhacodigo.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+body::after {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#imagem-animada {
+    background-image: url('src/logo.png');
+}
+
+#servicos ul {
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}
